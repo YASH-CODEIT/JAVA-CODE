@@ -5,7 +5,7 @@ public class Main {
         Scanner sc=new Scanner(System.in);
         System.out.println("Welcome to Rock, Paper,Scissor Game.");
         while(true){
-            System.out.println("Make a move by entering rock, paper, scissor or  If you want to quit enter exit");
+            System.out.println("Make a move by entering rock, paper, scissor or If you want to quit enter exit");
             String myMove=sc.nextLine();
             if(myMove.equals("exit")){
                 break;
@@ -22,28 +22,28 @@ public class Main {
                     opponentMove="paper";
                 else
                     opponentMove="scissor";
-                System.out.println("Opponent Move: "+ opponentMove);
+                System.out.println("Opponent Move: "+ opponentMove + "\n");
                 if(myMove.equals(opponentMove)) {
-                    System.out.println("It is tie");
+                    System.out.println("It is tie.");
                 }
                 else if((myMove.equals("paper") && opponentMove.equals("rock")) || (myMove.equals("rock") && opponentMove.equals("scissor")) ||
                         (myMove.equals("scissor") && opponentMove.equals("paper"))) {
-                    System.out.println("You win");
+                    System.out.println("You Win!");
                     userScore++;
                 }
                 else {
-                    System.out.println("You Lose");
+                    System.out.println("You Lose!");
                     opponentScore++;
                 }
             }
         }
-        System.out.println("The ScoreBoard is :");
-        System.out.println("opponentPlay  You");
+        System.out.println("The Score Board is :");
+        System.out.println("Opponent      You");
                 System.out.println(userScore+ "              "+ opponentScore);
                 if(userScore>opponentScore)
-                    System.out.println("The final winner is You");
+                    System.out.println("The final winner is You!");
                 else
-                    System.out.println("The final winner is Your opponent ");
+                    System.out.println("The final winner is your Opponent. ");
         System.out.println("Thank you for playing Stone, Paper Scissor Game.");
     }
 }
